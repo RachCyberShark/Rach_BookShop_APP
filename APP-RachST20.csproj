@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A9EF9AA-F3E4-498E-91CA-C4B98FDDA93D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>APP_RachST20</RootNamespace>
+    <AssemblyName>APP-RachST20</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="componnet\Catecorycontroller.cs" />
+    <Compile Include="componnet\Catecry.cs" />
+    <Compile Include="componnet\User.cs" />
+    <Compile Include="componnet\Usercontroller.cs" />
+    <Compile Include="congrate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="congrate.Designer.cs">
+      <DependentUpon>congrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="samrachDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>samrachDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\bookpost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Shop\bookpost.Designer.cs">
+      <DependentUpon>bookpost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\categorybook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\categorybook.Designer.cs">
+      <DependentUpon>categorybook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\CustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\CustomerInfo.Designer.cs">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\library.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\library.Designer.cs">
+      <DependentUpon>library.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\orderbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\orderbook.Designer.cs">
+      <DependentUpon>orderbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_Dasboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_Dasboard.Designer.cs">
+      <DependentUpon>Shop_Dasboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Showdetailbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Showdetailbook.Designer.cs">
+      <DependentUpon>Showdetailbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subform\Addbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subform\Addbook.Designer.cs">
+      <DependentUpon>Addbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subform\Add_catecory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subform\Add_catecory.Designer.cs">
+      <DependentUpon>Add_catecory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subform\DeleteCotegory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subform\DeleteCotegory.Designer.cs">
+      <DependentUpon>DeleteCotegory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subform\UpdateCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subform\UpdateCategory.Designer.cs">
+      <DependentUpon>UpdateCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subform\UserAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subform\UserAccount.Designer.cs">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subform\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subform\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subform\catecory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subform\catecory.Designer.cs">
+      <DependentUpon>catecory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol_componnet\catecory01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol_componnet\catecory01.Designer.cs">
+      <DependentUpon>catecory01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Userdashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Userdashboard.Designer.cs">
+      <DependentUpon>Userdashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyCodeRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerifyCodeRegister.Designer.cs">
+      <DependentUpon>VerifyCodeRegister.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="congrate.resx">
+      <DependentUpon>congrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\bookpost.resx">
+      <DependentUpon>bookpost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\categorybook.resx">
+      <DependentUpon>categorybook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\CustomerInfo.resx">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\library.resx">
+      <DependentUpon>library.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_Dasboard.resx">
+      <DependentUpon>Shop_Dasboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Showdetailbook.resx">
+      <DependentUpon>Showdetailbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subform\Add_catecory.resx">
+      <DependentUpon>Add_catecory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subform\DeleteCotegory.resx">
+      <DependentUpon>DeleteCotegory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subform\UpdateCategory.resx">
+      <DependentUpon>UpdateCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subform\UserAccount.resx">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subform\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subform\catecory.resx">
+      <DependentUpon>catecory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol_componnet\catecory01.resx">
+      <DependentUpon>catecory01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Userdashboard.resx">
+      <DependentUpon>Userdashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifyCodeRegister.resx">
+      <DependentUpon>VerifyCodeRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="samrachDataSet.xsc">
+      <DependentUpon>samrachDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="samrachDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>samrachDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="samrachDataSet.xss">
+      <DependentUpon>samrachDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="profile\360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg" />
+    <None Include="Resources\search-interface-symbol_544811.png" />
+    <None Include="Resources\confetti_11958190.png" />
+    <None Include="Resources\security-code_9469729.png" />
+    <None Include="profile\verification-codes.png" />
+    <None Include="profile\png-transparent-transaction-password-otp-verification-code-security-one-time-password-two-factor-cyber-security-solid-threat-protection-icon.png" />
+    <None Include="profile\c039b824474525.56334ce736de9.jpg" />
+    <None Include="profile\images.png" />
+    <Content Include="profile\nopf.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
